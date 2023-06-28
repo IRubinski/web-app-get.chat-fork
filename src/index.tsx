@@ -23,7 +23,7 @@ const initializeApp = async () => {
 		// TODO: Refactor global config
 		window.config = config;
 
-		initializeSentry(config);
+		// initializeSentry(config);
 
 		root.render(<App config={config} apiService={apiService} />);
 	} catch (error) {

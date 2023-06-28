@@ -25,19 +25,19 @@ module.exports = merge(commonWebpackConfig, {
 				},
 			],
 		}),
-		new SentryWebpackPlugin({
-			org: "getchat",
-			project: "inbox-frontend",
+		// new SentryWebpackPlugin({
+		// 	org: "getchat",
+		// 	project: "inbox-frontend",
 
-			// Specify the directory containing build artifacts
-			include: path.resolve(__dirname, '../build'),
+		// 	// Specify the directory containing build artifacts
+		// 	include: path.resolve(__dirname, '../build'),
 
-			// Auth tokens can be obtained from https://sentry.io/settings/account/api/auth-tokens/
-			// and needs the `project:releases` and `org:read` scopes
-			authToken: process.env.SENTRY_AUTH_TOKEN,
+		// 	// Auth tokens can be obtained from https://sentry.io/settings/account/api/auth-tokens/
+		// 	// and needs the `project:releases` and `org:read` scopes
+		// 	authToken: process.env.SENTRY_AUTH_TOKEN,
 
-			// Optionally uncomment the line below to override automatic release name detection
-			release: packageJson.version,
-		}),
+		// 	// Optionally uncomment the line below to override automatic release name detection
+		// 	release: packageJson.version,
+		// }),
 	],
 });
